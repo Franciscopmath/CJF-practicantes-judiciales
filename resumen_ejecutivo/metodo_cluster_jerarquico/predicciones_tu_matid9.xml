@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TSCXML
+	xmlns="http://xml.spss.com/components/time-series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xml.spss.com/components/time-series http://xml.spss.com/components/time-series-1.0.xsd">
+	<Header>
+		<Application
+			name="IBM SPSS Statistics"
+			version="20.0.0.0"/>
+	</Header>
+	<DataDictionary>
+		<DateSpecification
+			dateSpecID="1"
+			dateSpecDescriptor="Date specification derived from Statistics time-series date variables">
+			<Periods>
+				<Year
+					firstCaseIndex="2002"/>
+				<Quarter
+					cycleLength="4"
+					firstCaseIndex="3"/>
+				<Month
+					cycleLength="12"
+					firstCaseIndex="11"/>
+			</Periods>
+		</DateSpecification>
+	</DataDictionary>
+	<ARIMAModel
+		modelName="Model_1"
+		modelDescriptor="Cargadetrabajo.9_ARIMA"
+		variableID="Cargadetrabajo.9"
+		dateSpecID="1"
+		seasonLength="12">
+		<Transformation
+			nonSeasonalDiff="1"/>
+		<OutlierEffect
+			type="level"
+			startIndex="71">
+			<EstimatedParameter>53.5700372157171 12.6999007833335</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="transient"
+			startIndex="3">
+			<EstimatedParameter>48.9913827170173 12.6517037664603</EstimatedParameter>
+			<EstimatedParameter>0.975987137724703 0.102331949115356</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="transient"
+			startIndex="9">
+			<EstimatedParameter>45.7006529556494 13.0215875491455</EstimatedParameter>
+			<EstimatedParameter>0.944961257986683 0.16098144723323</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="seasonalAdditive"
+			startIndex="109">
+			<EstimatedParameter>15.9178654451733 3.66277750817171</EstimatedParameter>
+		</OutlierEffect>
+		<ARIMACLSState
+			periodDeficit="0">
+			<ZState>
+				<FinalZ>60</FinalZ>
+				<FinalPredictedZ>66.9831022936315</FinalPredictedZ>
+			</ZState>
+			<NoiseState/>
+		</ARIMACLSState>
+		<EstimationInfo
+			periodStartIndex="0"
+			periodLength="180"
+			degreesOfFreedom="173">
+			<Statistic
+				type="errVariance">160.991207055254</Statistic>
+			<Statistic
+				type="meanSqrErr">160.991207055254</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">12.6882310451557</Statistic>
+			<Statistic
+				type="meanAbsPctErr">8.14968718667606</Statistic>
+			<Statistic
+				type="meanAbsErr">9.81186648033772</Statistic>
+			<Statistic
+				type="maxAbsPctErr">44.9701393029148</Statistic>
+			<Statistic
+				type="maxAbsErr">38.4499520520294</Statistic>
+			<Statistic
+				type="rSqr">0.98053054263624</Statistic>
+			<Statistic
+				type="normBayesIC">5.25522860275646</Statistic>
+			<Statistic
+				type="logLikelihood">-705.719368057621</Statistic>
+			<Statistic
+				type="akaikeIC">1423.43873611524</Statistic>
+			<Statistic
+				type="bayesIC">1442.56305095029</Statistic>
+			<Statistic
+				type="stationaryRSqr">0.27024734743729</Statistic>
+			<LjungBoxStatistic
+				k="18"
+				degreesOfFreedom="18"
+				pValue="0.74034428666958">13.8262687521751</LjungBoxStatistic>
+		</EstimationInfo>
+	</ARIMAModel>
+	<ARIMAModel
+		modelName="Model_2"
+		modelDescriptor="Cargadetrabajo.20_ARIMA"
+		variableID="Cargadetrabajo.20"
+		dateSpecID="1"
+		seasonLength="12">
+		<Transformation
+			nonSeasonalDiff="1"
+			seasonalDiff="1"/>
+		<MovingAverage>
+			<NonSeasonalFactor>
+				<LagTerm
+					lag="3">
+					<EstimatedParameter>0.263132056426454 0.0792095782260597</EstimatedParameter>
+				</LagTerm>
+			</NonSeasonalFactor>
+			<SeasonalFactor>
+				<LagTerm
+					lag="1">
+					<EstimatedParameter>-0.88989179408199 0.0992989494738982</EstimatedParameter>
+				</LagTerm>
+			</SeasonalFactor>
+		</MovingAverage>
+		<OutlierEffect
+			type="additive"
+			startIndex="71">
+			<EstimatedParameter>35.2695517964422 7.36343006548407</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="additive"
+			startIndex="72">
+			<EstimatedParameter>32.897077312733 7.51455855495429</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="level"
+			startIndex="70">
+			<EstimatedParameter>32.7568051859078 9.23095409619971</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="transient"
+			startIndex="15">
+			<EstimatedParameter>-34.4500017789885 9.26617095125296</EstimatedParameter>
+			<EstimatedParameter>0.997197358423273 0.0993468487533598</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="seasonalAdditive"
+			startIndex="37">
+			<EstimatedParameter>18.9808587930651 4.24682878349718</EstimatedParameter>
+		</OutlierEffect>
+		<ARIMAMLSpState
+			periodDeficit="0">
+			<ZState>
+				<FinalZ>64 68 70 43 51 61 59 72 70 71 65 68 74</FinalZ>
+				<FinalPredictedZ>65.0818264646673 60.9317242638862 66.1039753155145 64.000344158981 47.814077576892 49.1427635645364 58.5139839248818 55.5495968627286 80.6294063904214 68.2783112697533 65.7720879934598 65.9929162461158 68.7138979133068</FinalPredictedZ>
+			</ZState>
+			<NoiseState>
+				<FinalNoise>-22.9978231148803 23.0021707840909 -9.99783529983884 9.00215863328248 7.0021525834071 -22.9978534495127 -0.9978594655243 21.0021345353248 -22.9978714470127 26.0021225874162 -12.9978833614355 2.00211070638525 18.0021047908318 -16.9979011081425 8.0020930094159</FinalNoise>
+				<FinalPredictedNoise>-9.83078245219267 6.92028639318345 -8.91600883517155 1.93388289716871 3.10612789892163 -1.99750929053171 -4.18378188863228 9.14489809986117 -23.4838875221309 9.55171945014479 -2.36847697101408 -0.719578023861411 18.7741927842916 -19.0049848620268 2.71599092272268</FinalPredictedNoise>
+			</NoiseState>
+			<ThetaRecursionState
+				finalIterationNumber="167">
+				<FinalThetas>
+					<ThetaVec>0 0 0.263128605502295 0 0 -6.48551832412961e-017 0 0 2.4652059178453e-016 0 0 -0.878057923573922 0 0 -0.231041256786699</ThetaVec>
+					<ThetaVec>0 0 0.26308816546237 0 0 0.000165894143770785 0 0 -0.000630467916835203 0 0 -0.878221656883465 0 0 -0.231044914963539</ThetaVec>
+					<ThetaVec>0 0 0.26308816546237 0 0 0.000165894143770785 0 0 -0.000630467916835203 0 0 -0.878221656883465 0 0 -0.231044914963539</ThetaVec>
+					<ThetaVec>0 0 0.26308816546237 0 0 0.000165894143770785 0 0 -0.000630467916835203 0 0 -0.878221656883465 0 0 -0.231044914963539</ThetaVec>
+					<ThetaVec>0 0 0.262573749502014 0 0 -7.94988801090814e-017 0 0 3.02125683117449e-016 0 0 -0.880618124153955 0 0 -0.231084818950778</ThetaVec>
+					<ThetaVec>0 0 0.262573749502014 0 0 -7.94988801090814e-017 0 0 3.02125683117449e-016 0 0 -0.880618124153955 0 0 -0.231084818950778</ThetaVec>
+					<ThetaVec>0 0 0.262573749502014 0 0 -7.94988801090814e-017 0 0 3.02125683117449e-016 0 0 -0.880618124153955 0 0 -0.231084818950778</ThetaVec>
+					<ThetaVec>0 0 0.26309340578223 0 0 -4.18867317733471e-017 0 0 1.64797838803072e-016 0 0 -0.880618124153955 0 0 -0.231674966355467</ThetaVec>
+					<ThetaVec>0 0 0.26309340578223 0 0 -4.18867317733471e-017 0 0 1.64797838803072e-016 0 0 -0.880618124153955 0 0 -0.231674966355467</ThetaVec>
+					<ThetaVec>0 0 0.26309340578223 0 0 -4.18867317733471e-017 0 0 1.64797838803072e-016 0 0 -0.880618124153955 0 0 -0.231674966355467</ThetaVec>
+					<ThetaVec>0 0 0.263129380341847 0 0 -7.94988960770823e-017 0 0 3.02169854241369e-016 0 0 -0.880618124153955 0 0 -0.231715818988677</ThetaVec>
+					<ThetaVec>0 0 0.263129380341847 0 0 -7.94988960770823e-017 0 0 3.02169854241369e-016 0 0 -0.880618124153955 0 0 -0.231715818988677</ThetaVec>
+					<ThetaVec>0 0 0.263129380341847 0 0 -7.94988960770823e-017 0 0 3.02169854241369e-016 0 0 -0.880618124153955 0 0 -0.231715818988677</ThetaVec>
+					<ThetaVec>0 0 0.263097943428996 0 0 0.000128938046972027 0 0 -0.000490017674212261 0 0 -0.880745492440062 0 0 -0.231718647523204</ThetaVec>
+					<ThetaVec>0 0 0.263097943428996 0 0 0.000128938046972027 0 0 -0.000490017674212261 0 0 -0.880745492440062 0 0 -0.231718647523204</ThetaVec>
+				</FinalThetas>
+				<FinalNu>1.01053178186867 1.01039639622038 1.01039639622038 1.01039639622038 1.00840068359033 1.00840068359033 1.00840068359033 1.00826281692389 1.00826281692389 1.00826281692389 1.00825327274478 1.00825327274478 1.00825327274478 1.00814800759968 1.00814800759968</FinalNu>
+			</ThetaRecursionState>
+		</ARIMAMLSpState>
+		<EstimationInfo
+			periodStartIndex="0"
+			periodLength="180"
+			degreesOfFreedom="159">
+			<Statistic
+				type="errVariance">88.4772548715268</Statistic>
+			<Statistic
+				type="meanSqrErr">106.238985687124</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">10.3072297775457</Statistic>
+			<Statistic
+				type="meanAbsPctErr">8.52786608887276</Statistic>
+			<Statistic
+				type="meanAbsErr">7.41210376395124</Statistic>
+			<Statistic
+				type="maxAbsPctErr">48.8380096720487</Statistic>
+			<Statistic
+				type="maxAbsErr">38.2917266254892</Statistic>
+			<Statistic
+				type="rSqr">0.949215275252057</Statistic>
+			<Statistic
+				type="normBayesIC">4.91086449459328</Statistic>
+			<Statistic
+				type="logLikelihood">-616.523702949677</Statistic>
+			<Statistic
+				type="akaikeIC">1249.04740589935</Statistic>
+			<Statistic
+				type="bayesIC">1273.99135639869</Statistic>
+			<Statistic
+				type="stationaryRSqr">0.578380429942367</Statistic>
+			<LjungBoxStatistic
+				k="18"
+				degreesOfFreedom="16"
+				pValue="0.54945704454296">14.6628423618266</LjungBoxStatistic>
+		</EstimationInfo>
+	</ARIMAModel>
+	<ARIMAModel
+		modelName="Model_3"
+		modelDescriptor="Cargadetrabajo.30_ARIMA"
+		variableID="Cargadetrabajo.30"
+		dateSpecID="1"
+		seasonLength="12">
+		<Transformation
+			nonSeasonalDiff="1"/>
+		<MovingAverage>
+			<SeasonalFactor>
+				<LagTerm
+					lag="1">
+					<EstimatedParameter>0.203408981411374 0.0812738212807273</EstimatedParameter>
+				</LagTerm>
+			</SeasonalFactor>
+		</MovingAverage>
+		<OutlierEffect
+			type="additive"
+			startIndex="26">
+			<EstimatedParameter>-34.8939992220583 9.71893290445093</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="additive"
+			startIndex="44">
+			<EstimatedParameter>46.4990271396022 9.8141918814538</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="additive"
+			startIndex="81">
+			<EstimatedParameter>56.9812451213431 12.1463891740305</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="additive"
+			startIndex="82">
+			<EstimatedParameter>54.9590861634222 13.8589016499489</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="additive"
+			startIndex="83">
+			<EstimatedParameter>65.7250788689949 12.0729793886437</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="level"
+			startIndex="71">
+			<EstimatedParameter>59.8213612635108 14.1833480733482</EstimatedParameter>
+		</OutlierEffect>
+		<ARIMAMLSpState
+			periodDeficit="0">
+			<ZState>
+				<FinalZ>100</FinalZ>
+				<FinalPredictedZ>99.6716452645994</FinalPredictedZ>
+			</ZState>
+			<NoiseState>
+				<FinalNoise>11 -5 -9 1 9 17 -8 -3 0 13 17 0</FinalNoise>
+				<FinalPredictedNoise>-0.971394462603702 -1.23031978574419 0.109770316142492 4.43053806459745 -0.410694374182155 -1.81417590947362 1.10764474136027 -1.34638766676045 0.703679368206589 -2.95874629327161 1.10773453706609 -0.328354735400639</FinalPredictedNoise>
+			</NoiseState>
+			<ThetaRecursionState
+				finalIterationNumber="179">
+				<FinalThetas>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 0.203408981411374</ThetaVec>
+				</FinalThetas>
+				<FinalNu>1 1 1 1 1 1 1 1 1 1 1 1</FinalNu>
+			</ThetaRecursionState>
+		</ARIMAMLSpState>
+		<EstimationInfo
+			periodStartIndex="0"
+			periodLength="180"
+			degreesOfFreedom="172">
+			<Statistic
+				type="errVariance">196.952963908196</Statistic>
+			<Statistic
+				type="meanSqrErr">198.556953476424</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">14.0910238618925</Statistic>
+			<Statistic
+				type="meanAbsPctErr">9.4675943430062</Statistic>
+			<Statistic
+				type="meanAbsErr">10.9679586261308</Statistic>
+			<Statistic
+				type="maxAbsPctErr">28.369160768076</Statistic>
+			<Statistic
+				type="maxAbsErr">45</Statistic>
+			<Statistic
+				type="rSqr">0.916619558421056</Statistic>
+			<Statistic
+				type="normBayesIC">5.49393464104872</Statistic>
+			<Statistic
+				type="logLikelihood">-723.498618692388</Statistic>
+			<Statistic
+				type="akaikeIC">1460.99723738478</Statistic>
+			<Statistic
+				type="bayesIC">1483.30893802566</Statistic>
+			<Statistic
+				type="stationaryRSqr">0.32113104594723</Statistic>
+			<LjungBoxStatistic
+				k="18"
+				degreesOfFreedom="17"
+				pValue="0.342856634049579">18.7536108361034</LjungBoxStatistic>
+		</EstimationInfo>
+	</ARIMAModel>
+	<ARIMAModel
+		modelName="Model_4"
+		modelDescriptor="Cargadetrabajo.40_ARIMA"
+		variableID="Cargadetrabajo.40"
+		dateSpecID="1"
+		seasonLength="12">
+		<Transformation
+			nonSeasonalDiff="1"/>
+		<Autoregression>
+			<SeasonalFactor>
+				<LagTerm
+					lag="1">
+					<EstimatedParameter>-0.937917019898122 0.0978133299938917</EstimatedParameter>
+				</LagTerm>
+			</SeasonalFactor>
+		</Autoregression>
+		<MovingAverage>
+			<SeasonalFactor>
+				<LagTerm
+					lag="1">
+					<EstimatedParameter>-0.849818449559002 0.151287626791342</EstimatedParameter>
+				</LagTerm>
+			</SeasonalFactor>
+		</MovingAverage>
+		<OutlierEffect
+			type="additive"
+			startIndex="6">
+			<EstimatedParameter>-45.3983678972196 8.71356687558271</EstimatedParameter>
+		</OutlierEffect>
+		<ARIMAMLSpState
+			periodDeficit="0">
+			<ZState>
+				<FinalZ>121</FinalZ>
+				<FinalPredictedZ>95.721475845055</FinalPredictedZ>
+			</ZState>
+			<NoiseState>
+				<FinalNoise>17 4 -8 -12 22 9 -1 2 -10 10 2 25</FinalNoise>
+				<FinalPredictedNoise>1.69698334608581 -7.62258062128463 -2.17878401660029 1.22167776421964 0.806851765466805 2.23009760711357 0.250286692346904 -2.97337328629537 -4.36901920668872 -2.00576242702922 4.32458927923673 -0.278524154944993</FinalPredictedNoise>
+			</NoiseState>
+			<ThetaRecursionState
+				finalIterationNumber="179">
+				<FinalThetas>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.848920421490577</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+					<ThetaVec>0 0 0 0 0 0 0 0 0 0 0 -0.849170395982631</ThetaVec>
+				</FinalThetas>
+				<FinalNu>1.00076316082077 1.0005507278855 1.0005507278855 1.0005507278855 1.0005507278855 1.0005507278855 1.0005507278855 1.0005507278855 1.0005507278855 1.0005507278855 1.0005507278855 1.0005507278855</FinalNu>
+			</ThetaRecursionState>
+		</ARIMAMLSpState>
+		<EstimationInfo
+			periodStartIndex="0"
+			periodLength="180"
+			degreesOfFreedom="176">
+			<Statistic
+				type="errVariance">151.765984926695</Statistic>
+			<Statistic
+				type="meanSqrErr">154.429139062208</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">12.4269521227937</Statistic>
+			<Statistic
+				type="meanAbsPctErr">7.78113420117306</Statistic>
+			<Statistic
+				type="meanAbsErr">9.48895177713281</Statistic>
+			<Statistic
+				type="maxAbsPctErr">28.5533807978347</Statistic>
+			<Statistic
+				type="maxAbsErr">41.1682720413614</Statistic>
+			<Statistic
+				type="rSqr">0.971089073330282</Statistic>
+			<Statistic
+				type="normBayesIC">5.12667477119414</Statistic>
+			<Statistic
+				type="logLikelihood">-703.220704215631</Statistic>
+			<Statistic
+				type="akaikeIC">1412.44140843126</Statistic>
+			<Statistic
+				type="bayesIC">1422.00356584879</Statistic>
+			<Statistic
+				type="stationaryRSqr">0.152350424594257</Statistic>
+			<LjungBoxStatistic
+				k="18"
+				degreesOfFreedom="16"
+				pValue="0.351676256827825">17.5373345123742</LjungBoxStatistic>
+		</EstimationInfo>
+	</ARIMAModel>
+	<ARIMAModel
+		modelName="Model_5"
+		modelDescriptor="Cargadetrabajo.658_ARIMA"
+		variableID="Cargadetrabajo.658"
+		dateSpecID="1"
+		seasonLength="12">
+		<Transformation
+			nonSeasonalDiff="1"/>
+		<Autoregression>
+			<NonSeasonalFactor>
+				<LagTerm
+					lag="1">
+					<EstimatedParameter>0.187807909682302 0.0770846572393555</EstimatedParameter>
+				</LagTerm>
+			</NonSeasonalFactor>
+		</Autoregression>
+		<OutlierEffect
+			type="additive"
+			startIndex="10">
+			<EstimatedParameter>-30.8795982028147 7.51645698344448</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="level"
+			startIndex="36">
+			<EstimatedParameter>-42.3784577657091 9.55858843141317</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="transient"
+			startIndex="71">
+			<EstimatedParameter>35.6509786679333 9.63873711426282</EstimatedParameter>
+			<EstimatedParameter>0.895826036650898 0.141219315761738</EstimatedParameter>
+		</OutlierEffect>
+		<OutlierEffect
+			type="seasonalAdditive"
+			startIndex="33">
+			<EstimatedParameter>-8.76699503287143 2.07329777772312</EstimatedParameter>
+		</OutlierEffect>
+		<ARIMAMLSpState
+			periodDeficit="0">
+			<ZState>
+				<FinalZ>91</FinalZ>
+				<FinalPredictedZ>80.2049734779426</FinalPredictedZ>
+			</ZState>
+			<NoiseState>
+				<FinalNoise>10.0000286922423</FinalNoise>
+			</NoiseState>
+			<ThetaRecursionState
+				finalIterationNumber="1">
+				<FinalThetas>
+					<ThetaVec/>
+				</FinalThetas>
+				<FinalNu>1.03656139764463</FinalNu>
+			</ThetaRecursionState>
+		</ARIMAMLSpState>
+		<EstimationInfo
+			periodStartIndex="0"
+			periodLength="180"
+			degreesOfFreedom="173">
+			<Statistic
+				type="errVariance">94.4829300301993</Statistic>
+			<Statistic
+				type="meanSqrErr">94.5816095475091</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">9.72530768395063</Statistic>
+			<Statistic
+				type="meanAbsPctErr">5.95897663531357</Statistic>
+			<Statistic
+				type="meanAbsErr">7.3501618988284</Statistic>
+			<Statistic
+				type="maxAbsPctErr">29.9519726902717</Statistic>
+			<Statistic
+				type="maxAbsErr">25.6258210622597</Statistic>
+			<Statistic
+				type="rSqr">0.946123550425262</Statistic>
+			<Statistic
+				type="normBayesIC">4.72334190874013</Statistic>
+			<Statistic
+				type="logLikelihood">-658.040036902394</Statistic>
+			<Statistic
+				type="akaikeIC">1328.08007380479</Statistic>
+			<Statistic
+				type="bayesIC">1347.20438863983</Statistic>
+			<Statistic
+				type="stationaryRSqr">0.309190970460634</Statistic>
+			<LjungBoxStatistic
+				k="18"
+				degreesOfFreedom="17"
+				pValue="0.405615562925461">17.7369378213887</LjungBoxStatistic>
+		</EstimationInfo>
+	</ARIMAModel>
+	<ARIMAModel
+		modelName="Model_6"
+		modelDescriptor="Cargadetrabajo.793_ARIMA"
+		variableID="Cargadetrabajo.793"
+		dateSpecID="1"
+		seasonLength="12">
+		<Transformation
+			nonSeasonalDiff="1"/>
+		<OutlierEffect
+			type="seasonalAdditive"
+			startIndex="166">
+			<EstimatedParameter>26.4999973529121 6.45771281451219</EstimatedParameter>
+		</OutlierEffect>
+		<ARIMACLSState
+			periodDeficit="0">
+			<ZState>
+				<FinalZ>192</FinalZ>
+				<FinalPredictedZ>188.500002647088</FinalPredictedZ>
+			</ZState>
+			<NoiseState/>
+		</ARIMACLSState>
+		<EstimationInfo
+			periodStartIndex="32"
+			periodLength="148"
+			degreesOfFreedom="146">
+			<Statistic
+				type="errVariance">166.808219178082</Statistic>
+			<Statistic
+				type="meanSqrErr">166.808219178082</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">12.9154256289943</Statistic>
+			<Statistic
+				type="meanAbsPctErr">9.55443083332339</Statistic>
+			<Statistic
+				type="meanAbsErr">9.95238095238095</Statistic>
+			<Statistic
+				type="maxAbsPctErr">44.4444444444444</Statistic>
+			<Statistic
+				type="maxAbsErr">37</Statistic>
+			<Statistic
+				type="rSqr">0.948113353437504</Statistic>
+			<Statistic
+				type="normBayesIC">5.15079328535711</Statistic>
+			<Statistic
+				type="logLikelihood">-584.170346128771</Statistic>
+			<Statistic
+				type="akaikeIC">1170.34069225754</Statistic>
+			<Statistic
+				type="bayesIC">1173.33112484432</Statistic>
+			<Statistic
+				type="stationaryRSqr">0.102079441549503</Statistic>
+			<LjungBoxStatistic
+				k="18"
+				degreesOfFreedom="18"
+				pValue="0.207081382181919">22.5841022463298</LjungBoxStatistic>
+		</EstimationInfo>
+	</ARIMAModel>
+	<ExpSmoothingModel
+		modelName="Model_7"
+		modelDescriptor="Cargadetrabajo.2408_AWinters"
+		variableID="Cargadetrabajo.2408"
+		dateSpecID="1">
+		<ESAdditiveWinters
+			seasonLength="12">
+			<ParmLevel>
+				<EstimatedParameter>0.140763500118751 0.145129898326926</EstimatedParameter>
+			</ParmLevel>
+			<ParmTrend>
+				<EstimatedParameter>3.83948001511462e-007 0.0588989043079793</EstimatedParameter>
+			</ParmTrend>
+			<ParmSeason>
+				<EstimatedParameter>2.42236573785756e-005 0.326937047257946</EstimatedParameter>
+			</ParmSeason>
+			<StateLevel>174.823458290523</StateLevel>
+			<StateTrend>1.33333087039526</StateTrend>
+			<StateSeason
+				phase="2">-2.24979902239344 0.416892446065595 6.58337984489309 30.2500497803026 -11.0832791363356 -19.4166068031711 -17.7499330895328 -8.08325783291518 -4.41658083523135 10.2500981417553 6.91677938192442 8.58346322134548</StateSeason>
+		</ESAdditiveWinters>
+		<EstimationInfo
+			periodStartIndex="166"
+			periodLength="14"
+			degreesOfFreedom="11">
+			<Statistic
+				type="errVariance">23.871812910204</Statistic>
+			<Statistic
+				type="meanSqrErr">23.871812910204</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">4.88587892913896</Statistic>
+			<Statistic
+				type="meanAbsPctErr">1.54404145548759</Statistic>
+			<Statistic
+				type="meanAbsErr">2.55570120101501</Statistic>
+			<Statistic
+				type="maxAbsPctErr">5.70492490858432</Statistic>
+			<Statistic
+				type="maxAbsErr">9.52722459733582</Statistic>
+			<Statistic
+				type="rSqr">0.904611852927571</Statistic>
+			<Statistic
+				type="normBayesIC">3.73821067170159</Statistic>
+			<Statistic
+				type="logLikelihood">-40.3858937746355</Statistic>
+			<Statistic
+				type="akaikeIC">86.771787549271</Statistic>
+			<Statistic
+				type="bayesIC">88.6889595381167</Statistic>
+		</EstimationInfo>
+	</ExpSmoothingModel>
+	<ARIMAModel
+		modelName="Model_8"
+		modelDescriptor="Cargadetrabajo.2416_ARIMA"
+		variableID="Cargadetrabajo.2416"
+		dateSpecID="1">
+		<ConstantTerm>
+			<EstimatedParameter>68.6188651155272 2.224108046111</EstimatedParameter>
+		</ConstantTerm>
+		<OutlierEffect
+			type="transient"
+			startIndex="176">
+			<EstimatedParameter>22.8301087979142 7.02963849314554</EstimatedParameter>
+			<EstimatedParameter>0.62172934278871 0.195318105549568</EstimatedParameter>
+		</OutlierEffect>
+		<ARIMACLSState
+			periodDeficit="0">
+			<NoiseState/>
+		</ARIMACLSState>
+		<EstimationInfo
+			periodStartIndex="166"
+			periodLength="14"
+			degreesOfFreedom="11">
+			<Statistic
+				type="errVariance">49.6751965876957</Statistic>
+			<Statistic
+				type="meanSqrErr">49.6751965876957</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">7.04806332177114</Statistic>
+			<Statistic
+				type="meanAbsPctErr">6.76869449978665</Statistic>
+			<Statistic
+				type="meanAbsErr">4.8045401569397</Statistic>
+			<Statistic
+				type="maxAbsPctErr">16.3184571761864</Statistic>
+			<Statistic
+				type="maxAbsErr">13.3811348844728</Statistic>
+			<Statistic
+				type="rSqr">0.540376095018918</Statistic>
+			<Statistic
+				type="normBayesIC">4.47101803082512</Statistic>
+			<Statistic
+				type="logLikelihood">-45.5155452885002</Statistic>
+			<Statistic
+				type="akaikeIC">97.0310905770003</Statistic>
+			<Statistic
+				type="bayesIC">98.9482625658461</Statistic>
+			<Statistic
+				type="stationaryRSqr">0.540376095018918</Statistic>
+		</EstimationInfo>
+	</ARIMAModel>
+</TSCXML>

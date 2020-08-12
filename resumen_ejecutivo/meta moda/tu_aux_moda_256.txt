@@ -1,0 +1,4 @@
+"corid_TU_AUX_62_256" "modamayor"
+"1" "Cargadetrabajo.1033" "41"
+"2" "Cargadetrabajo.1099" "50"
+"3" "Cargadetrabajo.1165" "39"
